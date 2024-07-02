@@ -15311,6 +15311,16 @@ table.dataTable thead .sorting_desc::after {
   border-radius: 10px;
   background: #fff;
 }
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+  .top-product-area-start {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .top-product-area-start {
+    padding: 20px;
+  }
+}
 .top-product-area-start .between-area-top {
   display: flex;
   align-items: center;

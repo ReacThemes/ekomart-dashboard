@@ -86,6 +86,12 @@
     padding: 30px;
     border-radius: 10px;
     background: #fff;
+    @media #{$laptop-device} {
+        padding: 20px;
+    }
+    @media #{$smlg-device} {
+        padding: 20px;
+    }
     .between-area-top{
         display: flex;
         align-items: center;
