@@ -13354,6 +13354,7 @@ header .headerleft .collups-show-icon.collapsed i {
   font-weight: 500;
   color: #fff;
   display: block;
+  min-width: max-content;
 }
 .tab-button-area-setting ul li button.active {
   color: #fff !important;
