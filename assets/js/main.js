@@ -692,6 +692,24 @@
               $popup.slideToggle();
               $(".slide-down__click").not($popup).slideUp(0);
           });
+
+        //   single acton on edit view
+          $(".between-stock-table.statrus img").click(function(e) {
+              e.preventDefault();
+              var $popup = $(this).siblings('.action-edit-deleate');
+
+              $popup.slideToggle();
+              $(".action-edit-deleate").not($popup).slideUp(0);
+          });
+        //   single acton on edit view
+          $(".between-stock-table img").click(function(e) {
+              e.preventDefault();
+              var $popup = $(this).siblings('.action-edit-deleate');
+
+              $popup.slideToggle();
+              $(".action-edit-deleate").not($popup).slideUp(0);
+          });
+
           // Popup Toggle
           $(".single_action__haeader").click(function(e) {
               $(this).toggleClass('active');

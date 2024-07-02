@@ -90,6 +90,15 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media #{$laptop-device} {
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        @media #{$smlg-device} {
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+        }
         .title{
             font-size: 20px;
             margin-bottom: 10px;
@@ -122,6 +131,21 @@
                 margin-bottom: 10px;
                 font-weight: 600;
                 color: #2C3C28;
+                @media #{$laptop-device} {
+                    font-size: 14px;
+                }
+                @media #{$smlg-device} {
+                    font-size: 14px;
+                }
+            }
+            span{
+                min-width: max-content;
+                @media #{$laptop-device} {
+                    font-size: 13px;
+                }
+                @media #{$smlg-device} {
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -132,6 +156,12 @@
             font-weight: 600;
             color: #2C3C28;
             min-width: max-content;
+            @media #{$laptop-device} {
+                font-size: 14px;
+            }
+            @media #{$smlg-device} {
+                font-size: 14px;
+            }
         }
     }
     .coupon-code,

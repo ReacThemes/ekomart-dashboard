@@ -33,6 +33,9 @@
     border-radius: 6px;
     height: 100%;
     background: #fff;
+    @media #{$laptop-device} {
+        padding: 20px;
+    }
     @media #{$sm-layout} {
         padding: 20px;
     }
@@ -54,7 +57,9 @@
     .title{
         font-size: 24px;
         margin-bottom: 15px;
-        
+        @media #{$laptop-device} {
+            font-size: 20px;
+        }
         span{
             padding: 4px 12px;
             background: var(--color-primary);
@@ -171,7 +176,6 @@
                 }
                 .rts-btn{
                     text-decoration: none;
-                    margin-left: auto;
                 }
                 .open{
                     padding: 5px 10px;
@@ -528,18 +532,19 @@
     .paginate_button.current{
         background: var(--color-primary) !important;
         color: #fff !important;
-        border: 1px solid var(--color-primary);
+        border: 1px solid var(--color-primary) !important;
     }
     .paginate_button:hover{
         background: var(--color-primary) !important;
-        color: #fff;
-        border: 1px solid var(--color-primary);
+        color: #fff !important;
+        border: 1px solid var(--color-primary) !important;
     }
     .paginate_button{
         background: #fff !important;
         color: var(--color-primary);
-        border: 1px solid #fff;
-        box-shadow: 4px 4px 6px #0000001a;
+        border: 1px solid #fff !important;
+        // box-shadow: 4px 4px 6px #0000001a;
+        border: 1px solid #f1f1f1 !important;
     }
 }
 table.dataTable.no-footer {
@@ -566,4 +571,119 @@ table.dataTable.no-footer {
     #example_wrapper #example_paginate{
         padding: 20px 0 !important;
     }
+}
+
+table.dataTable thead .sorting {
+    position: relative;
+    background-image: none;
+    max-width: max-content;
+    &::after{
+        content: "";
+        right: 0;
+        position: absolute;
+        background-image: url(../images/form/01.png);
+        height: 19px;
+        width: 19px;
+        background-repeat: no-repeat;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+    }
+}
+
+table.dataTable thead .sorting_asc {
+    position: relative;
+    background-image: none;
+    max-width: max-content;
+    &::after{
+        content: "";
+        right: 0;
+        position: absolute;
+        background-image: url(../images/form/01.png);
+        height: 19px;
+        width: 19px;
+        background-repeat: no-repeat;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+    }
+}
+
+table.dataTable thead .sorting_asc {
+   background-image: none !important;
+}
+table.dataTable thead .sorting_desc {
+    background-image: none !important;
+    position: relative;
+    background-image: none;
+    max-width: max-content;
+    &::after{
+        content: "";
+        right: 0;
+        position: absolute;
+        background-image: url(../images/form/02.png);
+        height: 19px;
+        width: 19px;
+        background-repeat: no-repeat;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+    }
+}
+
+
+
+.order-page .vendor-list-main-wrapper tbody tr td:nth-child(2) {
+    width: 17%;
+}
+
+
+.between-stock-table.statrus{
+    position: relative;
+    .action-edit-deleate{
+        position: absolute;
+        top: 52%;
+        right: 24px;
+        border: 1px solid #f1f1f1;
+        z-index: 10;
+        display: none;
+        border-radius: 5px;
+        span{
+            &:last-child{
+                border: none;
+            }
+            display: block;
+            max-width: 100%;
+            padding: 17px;
+            background: #fff;
+            border-bottom: 1px solid #f1f1f1;
+            font-weight: 500;
+            color: #74787C;
+            cursor: pointer;
+        }
+    }
+}
+.between-stock-table.action{
+    position: relative;
+    .action-edit-deleate{
+        position: absolute;
+        top: 52%;
+        right: 24px;
+        border: 1px solid #f1f1f1;
+        z-index: 10;
+        display: none;
+        border-radius: 5px;
+        span{
+            &:last-child{
+                border: none;
+            }
+            display: block;
+            max-width: 100%;
+            padding: 17px;
+            background: #fff;
+            border-bottom: 1px solid #f1f1f1;
+            font-weight: 500;
+            color: #74787C;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.p-d-page .vendor-list-main-wrapper tbody tr td:nth-child(2) {
+    width: 15%;
 }
