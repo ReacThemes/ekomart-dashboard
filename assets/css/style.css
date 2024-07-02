@@ -14318,10 +14318,10 @@ table.dataTable thead .sorting_desc::after {
   width: 17%;
 }
 
-.between-stock-table.statrus {
+.between-stock-table.statrusts {
   position: relative;
 }
-.between-stock-table.statrus .action-edit-deleate {
+.between-stock-table.statrusts .action-edit-deleate {
   position: absolute;
   top: 52%;
   right: 24px;
@@ -14330,7 +14330,7 @@ table.dataTable thead .sorting_desc::after {
   display: none;
   border-radius: 5px;
 }
-.between-stock-table.statrus .action-edit-deleate span {
+.between-stock-table.statrusts .action-edit-deleate span {
   display: block;
   max-width: 100%;
   padding: 17px;
@@ -14340,7 +14340,7 @@ table.dataTable thead .sorting_desc::after {
   color: #74787C;
   cursor: pointer;
 }
-.between-stock-table.statrus .action-edit-deleate span:last-child {
+.between-stock-table.statrusts .action-edit-deleate span:last-child {
   border: none;
 }
 

@@ -694,15 +694,16 @@
           });
 
         //   single acton on edit view
-          $(".between-stock-table.statrus img").click(function(e) {
+          $(".between-stock-table.statrusts img").click(function(e) {
               e.preventDefault();
               var $popup = $(this).siblings('.action-edit-deleate');
 
               $popup.slideToggle();
               $(".action-edit-deleate").not($popup).slideUp(0);
           });
+          
         //   single acton on edit view
-          $(".between-stock-table img").click(function(e) {
+          $(".between-stock-table.action img").click(function(e) {
               e.preventDefault();
               var $popup = $(this).siblings('.action-edit-deleate');
 
