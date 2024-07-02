@@ -13879,6 +13879,11 @@ form.change-pass-form input,
   --bs-table-accent-bg: transparent;
 }
 
+.vendor-list-p .vendor-list-main-wrapper tbody tr td .rts-btn {
+  text-decoration: none;
+  margin-left: auto;
+}
+
 .vendor-banner-left {
   background: #2C3C28;
   border-radius: 6px;
@@ -14014,6 +14019,12 @@ form.change-pass-form input,
   right: 50px;
   bottom: 0;
   height: 100%;
+}
+@media only screen and (max-width: 1199px) {
+  .product-area-add-wrapper .one {
+    max-width: 29%;
+    height: auto;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .product-area-add-wrapper .one {
