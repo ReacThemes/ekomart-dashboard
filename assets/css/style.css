@@ -16785,4 +16785,14 @@ edit .quantity-edit button {
   font-weight: 500;
   margin-left: auto;
 }
+[dir=rtl] .tab-button-area-setting ul li button {
+  min-width: max-content;
+  flex-flow: row-reverse;
+  display: flex;
+  align-items: center;
+}
+[dir=rtl] .tab-button-area-setting ul li button img {
+  margin-left: 18px;
+  margin-right: auto;
+}
 /*# sourceMappingURL=../maps/style.css.map */

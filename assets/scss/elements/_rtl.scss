@@ -199,4 +199,15 @@
         font-weight: 500;
         margin-left: auto;
     }
+
+    .tab-button-area-setting ul li button {
+        min-width: max-content;
+        flex-flow: row-reverse;
+        display: flex;
+        align-items: center;
+    }
+    .tab-button-area-setting ul li button img {
+        margin-left: 18px;
+        margin-right: auto;
+    }
 }
