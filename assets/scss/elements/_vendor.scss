@@ -123,6 +123,9 @@
             width: 1000px;
         }
     }
+    @media #{$small-mobile} {
+        padding: 6px;
+    }
 }
 
 .vendor-list-main-wrapper{
@@ -588,7 +591,7 @@ table.dataTable thead .sorting {
     max-width: max-content;
     &::after{
         content: "";
-        right: 0;
+        right: auto;
         position: absolute;
         background-image: url(../images/form/01.png);
         height: 19px;
@@ -604,7 +607,7 @@ table.dataTable thead .sorting_asc {
     max-width: max-content;
     &::after{
         content: "";
-        right: 0;
+        right: auto;
         position: absolute;
         background-image: url(../images/form/01.png);
         height: 19px;
@@ -657,12 +660,17 @@ table.dataTable thead .sorting_desc {
             }
             display: block;
             max-width: 100%;
-            padding: 17px;
+            padding: 17px 25px;
             background: #fff;
             border-bottom: 1px solid #f1f1f1;
             font-weight: 500;
             color: #74787C;
             cursor: pointer;
+            transition: .3s;
+            &:hover{
+                background: var(--color-primary);
+                color: #fff;
+            }
         }
     }
 }
@@ -688,6 +696,11 @@ table.dataTable thead .sorting_desc {
             font-weight: 500;
             color: #74787C;
             cursor: pointer;
+            transition: .3s;
+            &:hover{
+                background: var(--color-primary);
+                color: #fff;
+            }
         }
     }
 }
