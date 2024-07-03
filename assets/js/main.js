@@ -48,6 +48,7 @@
             rtsJs.unloadImage();
             rtsJs.niceSelect();
             rtsJs.backToTopInit();
+            rtsJs.darklightSwitcher();
         },
 
         datatable: function(){
@@ -1066,6 +1067,86 @@
           });
     
         },
+
+        darklightSwitcher: function(){
+            let html = document.documentElement;
+            let rtsTheme = localStorage.theme;
+            let rtsThemeLayout = localStorage.layout;
+            let rtsThemeNavbar = localStorage.navbar;
+
+            let darkMode = rtsTheme === "dark";
+            let rtlLayout = rtsThemeLayout === "rtl";
+            let topMenu = rtsThemeNavbar === "top";
+
+            // Theme Mode Toggle 
+            if (rtsTheme) {
+                html.setAttribute("data-theme", rtsTheme);
+
+                if (rtsTheme === "dark") {
+                    localStorage.theme === "dark"
+                    $(".rts-customizer__btn--light").removeClass("active");
+                    $(".rts-customizer__btn--dark").addClass("active");
+                    
+                } else {
+                    localStorage.theme === "light"
+                }
+            }
+
+            // Theme Layout Toggle
+            if (rtsThemeLayout) {
+
+                html.setAttribute("dir", rtsThemeLayout);
+
+                if (rtsThemeLayout === "rtl") {
+                    localStorage.themeLayout === "rtl"
+                    $(".rts-customizer__btn--ltr").removeClass("active");
+                    $(".rts-customizer__btn--rtl").addClass("active");
+                } else {
+                    localStorage.themeLayout === "ltr"
+                }
+            }
+
+            	// RTL Layout
+            function rtlTheme(e) {
+                let rtsThemeLayout = "rtl";
+                localStorage.layout = rtsThemeLayout;
+                document.documentElement.setAttribute("dir", rtsThemeLayout);
+
+                rtlLayout = true;
+            }
+
+            // LTR Layout
+            function ltrTheme(e) {
+                let rtsThemeLayout = "ltr";
+                localStorage.layout =  rtsThemeLayout;
+                document.documentElement.setAttribute("dir", rtsThemeLayout);
+
+                rtlLayout = false;
+            }
+
+            // LTR Layout Add
+            $(".rts-customizer__btn--ltr").click(function() {
+                $(".rts-customizer__btn--rtl").removeClass("active");
+                $(".rts-customizer__btn--ltr").addClass("active");
+
+                ltrTheme();
+
+                if($("body").hasClass("layout-rtl")) {
+                	$("body").removeClass("layout-rtl");
+                }
+                $('html').attr('dir', 'ltr');
+                $("body").addClass("layout-ltr");
+            })
+
+            // RTL Layout Add
+            $(".rts-customizer__btn--rtl").click(function() {
+                $(".rts-customizer__btn--ltr").removeClass("active");
+                $(".rts-customizer__btn--rtl").addClass("active");
+                
+                rtlTheme();
+            })
+
+        }
         
 
 
